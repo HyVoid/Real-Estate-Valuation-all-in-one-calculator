@@ -1,13 +1,31 @@
-[English](#bookmark=id.bldyh4nwav2d)
+<!-- Language Navigation -->
+<div align="center">
 
-# **Run Real Estate Deal Economics Before the Spreadsheet Opens**
+[English](#english)
+
+</div>
+
+---
+
+<a name="english"></a>
+
+# Run Real Estate Deal Economics Before the Spreadsheet Opens
+
+<div align="center">
+
+![License](https://img.shields.io/badge/license-Apache%202.0-blue)
+![Platform](https://img.shields.io/badge/platform-Browser%20HTML-orange)
+![Type](https://img.shields.io/badge/type-Real%20Estate%20Financial%20Model-004B87)
 
 **Built for acquisition analysts and investment teams who need to pressure-test parametric deal logic — IRR, peak equity, VAT timing, amortization profiles, scenario sensitivity — without opening or distributing a locked Excel file.**
 
 [Live Demo](https://your-demo-link-here) | [Full Excel Model](https://your-purchase-link-here)
 
-A self-contained browser application that replicates the full ![][image1] calculation engine of a parametric real estate financial model — including three amortization types, VAT offset logic, S-curve capex distribution, and live XIRR — with no backend, no installation, and no file upload.
+</div>
 
+A self-contained browser application that replicates the full 121-month calculation engine of a parametric real estate financial model — including three amortization types, VAT offset logic, S-curve capex distribution, and live XIRR — with no backend, no installation, and no file upload.
+
+---
 ## **Quick Preview**
 
 🌐 **Interactive Demo:** [RE Financial Model Live](https://your-demo-link-here)
