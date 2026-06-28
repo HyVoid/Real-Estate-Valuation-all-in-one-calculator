@@ -1,15 +1,3 @@
-
-<!-- Language Navigation -->
-<div align="center">
-
-[English](#english)
-
-</div>
-
----
-
-<a name="english"></a>
-
 # Run Real Estate Deal Economics Before the Spreadsheet Opens
 
 <div align="center">
