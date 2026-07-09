@@ -1,0 +1,6 @@
+{
+  "name": "Real Estate Operations Financial Model",
+  "description": "High-precision parametric decision engine and interactive simulator for evaluating real estate operations financial models and scenarios.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

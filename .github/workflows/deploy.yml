@@ -1,0 +1,72 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - master # Triggers on push to main or master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          # Disabled npm Cache Setup because dependencies lock file is not found in workspace
+          cache: '' 
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Next.js Static Export
+        env:
+          GITHUB_ACTIONS: "true"
+        run: npm run build
+
+      - name: Relativize Next.js Asset Paths for GitHub Pages
+        run: |
+          node -e '
+            const fs = require("fs");
+            const path = require("path");
+            function walk(dir) {
+              const files = fs.readdirSync(dir);
+              for (const file of files) {
+                const fullPath = path.join(dir, file);
+                if (fs.statSync(fullPath).isDirectory()) {
+                  walk(fullPath);
+                } else if (file.endsWith(".html") || file.endsWith(".js") || file.endsWith(".css")) {
+                  let content = fs.readFileSync(fullPath, "utf8");
+                  // Replace absolute "/_next" paths to relative "./_next" paths
+                  content = content.replace(/(href|src|from)="\/_next/g, "$1=\"./_next");
+                  content = content.replace(/(href|src)="\/favicon\.ico/g, "$1=\"./favicon.ico");
+                  // Replace raw JS quotes
+                  content = content.replace(/"\/_next/g, "\"./_next");
+                  content = content.replace(/\'\/_next/g, "\'./_next");
+                  fs.writeFileSync(fullPath, content, "utf8");
+                }
+              }
+            }
+            if (fs.existsSync("out")) {
+              walk("out");
+              console.log("Successfully converted Next.js absolute asset paths to relative paths for zero-config GitHub Pages!");
+            } else {
+              console.log("out/ directory not found.");
+            }
+          '
+
+      - name: Deploy to GitHub Pages Branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: out
+          branch: gh-pages # Deploys static build folder to gh-pages branch
+          clean: true
