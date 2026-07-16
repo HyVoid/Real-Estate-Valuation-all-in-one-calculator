@@ -137,34 +137,32 @@ I build lightweight analytical tools for situations where too many operational, 
 
 Instead of replacing enterprise software, these tools organize the information needed to make the **next decision with confidence**. The **Real Estate Operations Financial Model** applies this philosophy to property investment by combining acquisition analysis, financing, development cash flow, operational performance, and investment returns into one reusable decision-support framework.
 
-# Technical Details
+## Technical Details
 
 <details>
 <summary><strong>For technical reviewers, Excel practitioners, and collaborators</strong></summary>
 
----
+### Workbook Architecture
 
-# Workbook Architecture
+The workbook follows a layered architecture that separates assumptions, calculations, and reporting. Each worksheet has a single responsibility, making the model easier to audit, extend, and maintain without introducing circular references.
 
-The workbook is intentionally designed as a **single-file decision-support model** rather than a property management database or ERP system. Every worksheet has one responsibility, allowing assumptions, calculations, and reporting to remain independent while updating automatically through dynamic Excel formulas.
+| Worksheet | Purpose | Primary Outputs |
+|-----------|---------|-----------------|
+| **01_Setup_Scenarios** | Select investment strategy and scenario | Active scenario parameters |
+| **02_Assumptions** | Centralized project inputs | Normalized calculation drivers |
+| **03_Calculation_Engine** | Monthly financial calculations | Cash flow schedules, financing, returns |
+| **04_Dashboard** | Executive reporting | KPIs, charts, scenario comparison |
 
-| Worksheet | Primary Role | Inputs | Outputs |
-|------------|--------------|--------|---------|
-| **01_Setup_Scenarios** | Project configuration and scenario selection | Strategy, scenario, global parameters | Active scenario variables |
-| **02_Assumptions** | Central input sheet | Acquisition, construction, debt, VAT, rental, exit assumptions | Normalized calculation drivers |
-| **03_Calculation_Engine** | Monthly financial engine | Assumptions from previous sheets | Cash flow schedules, financing calculations, investment metrics |
-| **04_Summary_Dashboard** | Executive reporting | Calculation outputs | KPIs, charts, sensitivity analysis |
-
-The analytical workflow follows one direction only:
+Data always flows in one direction:
 
 ```text
-Project Strategy
+Investment Strategy
         │
         ▼
 Scenario Selection
         │
         ▼
-Investment Assumptions
+Project Assumptions
         │
         ▼
 Monthly Calculation Engine
@@ -173,25 +171,25 @@ Monthly Calculation Engine
 Debt & Cash Flow
         │
         ▼
-Performance Metrics
+Investment Metrics
         │
         ▼
 Executive Dashboard
 ```
 
-This one-directional architecture prevents circular dependencies, simplifies auditing, and allows individual assumptions to be modified without rebuilding the workbook.
+This architecture minimizes hidden dependencies and ensures every reported metric can be traced back to a controlled input.
 
 ---
 
-# Analytical Framework
+### Decision Framework
 
-Rather than estimating profitability from isolated calculations, the model evaluates an investment through five connected analytical layers.
+The model evaluates a project as a connected financial system rather than a collection of independent calculations.
 
 ```text
 Acquisition
       │
       ▼
-Development / Rental Operations
+Construction / Operations
       │
       ▼
 Cash Flow Timing
@@ -203,102 +201,60 @@ Debt Financing
 Equity Returns
 ```
 
-Each layer influences the next.
+Each stage affects the next.
 
-A change in construction timing affects financing.
+A delayed construction schedule increases financing duration.
 
-Financing affects interest expense.
+Longer financing increases interest expense.
 
-Interest expense affects investor cash flow.
+Higher financing costs reduce equity cash flow.
 
-Investor cash flow ultimately determines Equity IRR.
+Reduced equity cash flow ultimately lowers investor returns.
 
-This structure makes the model suitable for evaluating complete investment decisions rather than individual financial metrics.
-
----
-
-# Decision Flow
-
-```text
-Select Strategy
-        │
-        ▼
-Choose Scenario
-        │
-        ▼
-Enter Assumptions
-        │
-        ▼
-Generate Monthly Timeline
-        │
-        ▼
-Calculate Operating Cash Flow
-        │
-        ▼
-Apply Financing Structure
-        │
-        ▼
-Calculate Equity Cash Flow
-        │
-        ▼
-Produce Investment KPIs
-```
-
-The same process supports multiple investment strategies including:
-
-- Acquisition & Resale
-- Refurbishment Projects
-- Ground-up Development
-- Buy-to-Rent
-- Joint Venture Structures
+Instead of optimizing isolated metrics, the workbook evaluates how every assumption propagates through the complete investment lifecycle.
 
 ---
 
-# Three Traps That Catch Even Experienced Real Estate Investors
+### Three Traps That Catch Even Experienced Real Estate Investors
 
 ---
 
-## Trap 1 — Choosing the Highest Profit Instead of the Strongest Investment
+#### Trap 1 — Selecting the Highest Margin Instead of the Strongest Investment
 
-A development opportunity shows the highest projected profit margin among several alternatives.
+A development opportunity appears superior because it produces the largest projected gross profit.
 
-The investment committee selects the project because total profit appears largest.
+The decision is based solely on end-of-project profitability.
 
-Unfortunately, profit is measured only at project completion.
+However, this ignores the amount of investor capital tied up throughout construction.
 
-The analysis ignores financing requirements during construction.
+| Traditional Analysis | Integrated Analysis |
+|----------------------|---------------------|
+| Highest development margin | Highest capital efficiency |
+| Focus on final profit | Focus on lifecycle return |
+| Financing reviewed later | Financing modeled from day one |
 
-| Traditional View | Integrated Model |
-|------------------|------------------|
-| Highest projected profit | Highest risk-adjusted return |
-| Construction budget only | Construction + financing + liquidity |
-| End-of-project margin | Entire investment lifecycle |
-
-### Example
+Example:
 
 | Metric | Project A | Project B |
-|---------|-----------|-----------|
-| Development Profit | \$2.9M | \$2.5M |
-| Peak Equity Required | \$5.8M | \$3.9M |
+|---------|----------:|----------:|
+| Development Profit | €2.9M | €2.5M |
+| Peak Equity Required | €5.8M | €3.9M |
 | Equity IRR | 17.8% | 21.4% |
 
-Project A appears superior until financing costs and capital timing are considered.
-
-The recommendation changes because investor capital efficiency—not gross profit—is the limiting factor.
+Although Project A earns a larger accounting profit, Project B delivers a higher return on invested equity with substantially lower funding pressure.
 
 <details>
-<summary>Formula Logic</summary>
+<summary>Calculation Logic</summary>
 
 Typical calculations include:
 
 ```text
-Monthly Net Cash Flow
+Net Monthly Cash Flow
 
 Operating Cash
-− Construction
+− Construction Cost
 − Financing Cost
 − Taxes
-= Net Monthly Cash
 ```
 
 ```text
@@ -311,32 +267,38 @@ Equity IRR
 
 ---
 
-## Trap 2 — Assuming Construction Timing Does Not Affect Returns
+#### Trap 2 — Assuming Time Does Not Change Profitability
 
-The project budget remains unchanged.
+The total construction budget remains unchanged.
 
-Only the construction schedule slips by four months.
+Only the construction schedule moves back by four months.
 
-Many feasibility studies assume this has little impact because total cost is identical.
+Many feasibility studies conclude that profitability is unchanged because total expenditure is identical.
 
-In reality, delayed construction extends debt usage, postpones sales proceeds, increases accumulated interest, and delays equity recovery.
+The missing variable is **time**.
 
-| Assumption | Initial Model | Updated Model |
-|------------|---------------|---------------|
-| Construction Cost | Same | Same |
-| Construction Duration | 18 months | 22 months |
-| Financing Cost | Underestimated | Higher |
-| Investor Return | Overstated | Lower |
+Debt remains outstanding longer.
 
-The investment has not become more expensive because of construction cost.
+Interest accumulates.
 
-It has become more expensive because capital remains deployed longer.
+Investor capital remains locked into the project.
+
+| Assumption | Original | Delayed |
+|------------|---------:|---------:|
+| Construction Budget | €1.45M | €1.45M |
+| Duration | 18 Months | 22 Months |
+| Interest Cost | Lower | Higher |
+| Equity IRR | Higher | Lower |
+
+The project has not become more expensive because construction costs increased.
+
+It has become more expensive because capital is committed for a longer period.
 
 <details>
-<summary>Formula Logic</summary>
+<summary>Calculation Logic</summary>
 
 ```text
-Interest
+Interest Expense
 
 Outstanding Debt
 ×
@@ -353,37 +315,37 @@ Project Timeline
 
 ---
 
-## Trap 3 — Ignoring Temporary Liquidity Shortages
+#### Trap 3 — Ignoring Temporary Liquidity Shortages
 
-An investment eventually generates attractive returns.
+A project may finish with an attractive IRR while experiencing severe cash shortages during construction.
 
-However, several months during construction produce substantial negative cash balances.
+Traditional feasibility studies often emphasize the final investment return without evaluating whether the project can remain financially viable month by month.
 
-Traditional feasibility studies often report the final IRR while ignoring whether the project can survive until that point.
-
-The integrated model evaluates funding requirements month by month.
+The workbook continuously tracks cumulative cash position throughout the project.
 
 | Without Monthly Cash Analysis | With Monthly Cash Analysis |
 |-------------------------------|----------------------------|
-| Final profit only | Monthly liquidity visibility |
-| Financing added later | Financing integrated from the start |
-| Cash shortages discovered during execution | Funding gaps identified before acquisition |
+| Final return only | Full cash timeline |
+| Liquidity reviewed later | Liquidity monitored monthly |
+| Funding gaps discovered during execution | Funding gaps identified before investment |
 
-Instead of asking whether a project is profitable, the workbook also asks whether the project can remain financially viable throughout execution.
+This shifts the key question from **"Will the project make money?"** to **"Can the project remain financeable until it makes money?"**
 
 <details>
-<summary>Formula Logic</summary>
+<summary>Calculation Logic</summary>
 
 ```text
 Running Cash Balance
 
 Opening Cash
-+ Cash In
-− Cash Out
++
+Cash Inflows
+−
+Cash Outflows
 ```
 
 ```text
-If Balance < 0
+If Cash Balance < 0
 
 Borrow From Revolving Credit
 ```
@@ -392,150 +354,132 @@ Borrow From Revolving Credit
 
 ---
 
-# Example Scenario
+### Example Scenario
 
-A private investment group evaluates the acquisition of a mixed-use property requiring refurbishment before resale.
+A private investment group is evaluating the acquisition of a mixed-use commercial property that requires refurbishment before resale.
 
-### Initial Assumptions
+Initial assumptions:
 
 | Item | Value |
-|------|-------|
+|------|------:|
 | Purchase Price | €3,200,000 |
 | Acquisition Tax | 6% |
 | Construction Budget | €1,450,000 |
 | Loan-to-Value | 70% |
-| Senior Loan Rate | 5.4% |
-| Construction Duration | 18 Months |
+| Senior Debt Rate | 5.4% |
+| Construction Period | 18 Months |
 | Planned Exit | Month 24 |
 
-After entering these assumptions, the workbook automatically generates a complete monthly investment timeline.
+Once these assumptions are entered, the calculation engine generates a complete monthly financial timeline.
 
-The model distributes construction costs according to the selected spending curve, applies VAT timing, calculates contractor retention releases, estimates financing requirements, projects interest expense, tracks revolving credit usage where necessary, and produces monthly equity cash flows.
+Construction expenditure is allocated according to the selected spending curve. VAT payments and recoveries are scheduled using the configured recovery delay. Financing requirements are recalculated each month based on cumulative cash position, while interest expense and debt balances update automatically. Exit proceeds, debt repayment, and equity distributions are then incorporated into the final investment metrics.
 
-Instead of receiving only a final IRR calculation, decision makers can review:
+Rather than producing only a single profitability estimate, the model provides decision makers with visibility into:
 
-- Monthly borrowing requirements
-- Debt repayment schedule
+- Monthly cash balances
+- Financing utilization
+- Debt repayment schedules
 - Peak equity exposure
-- Construction cash burn
 - VAT recovery timing
+- Construction cash burn
 - Exit proceeds
-- Equity distributions
 - Project IRR
 - Equity IRR
 - Equity Multiple
 
-The completed analysis reveals that although the project generates an attractive development margin, peak equity demand occurs during Months 11–15 because construction expenditure temporarily exceeds available financing.
+In this scenario, the development remains profitable overall, but the analysis identifies a temporary liquidity deficit between Months 11 and 15, where construction expenditure temporarily exceeds available financing capacity.
 
-Without this visibility, investors might underestimate required capital and experience avoidable liquidity pressure during execution.
+Without monthly cash flow analysis, this funding requirement could remain hidden until execution, forcing additional borrowing or delaying construction. By revealing these financing constraints before capital is committed, the workbook supports decisions that consider not only profitability, but also execution risk and capital availability.
+### Formula Reference
 
-The workbook therefore changes the investment discussion from **"Will this project make money?"** to **"Can this project generate attractive returns while remaining financeable throughout its lifecycle?"**
-
-</details>
-<details>
-<summary><strong>Formula Reference</strong></summary>
-
-The workbook is designed around a strict separation of **Inputs → Calculation Engine → Outputs**. Core calculations are performed using Microsoft Excel 365 dynamic formulas and named ranges, allowing scenarios to update without modifying calculation logic.
+The workbook uses a modular calculation engine that separates assumptions, timelines, financing, operating performance, and investment metrics. Each module can be reviewed independently while remaining connected through the centralized calculation engine.
 
 ---
 
-### Scenario Management
-
 <details>
-<summary>Scenario Selection & Global Parameters</summary>
+<summary><strong>Scenario Management</strong></summary>
 
 **Purpose**
 
-Loads the active investment scenario (Base, Optimistic, or Downside) and distributes all global assumptions throughout the workbook.
+Loads the active investment scenario and distributes global assumptions throughout the workbook.
 
-Typical functions include:
+Typical Excel functions:
 
 ```excel
 =XLOOKUP(Active_Scenario,Scenario_Table[Scenario],Scenario_Table[Value])
 ```
 
 ```excel
-=CHOOSE(Active_Scenario,Base_Value,Upside_Value,Downside_Value)
+=CHOOSE(Scenario_ID,Base,Optimistic,Downside)
 ```
 
-**Used for**
+Supports:
 
-- Scenario switching
-- Global inflation assumptions
-- Exit pricing assumptions
-- Construction cost multipliers
+- Base Case
+- Optimistic Case
+- Downside Case
+- Inflation assumptions
+- Exit assumptions
 - Financing assumptions
 
 </details>
 
 ---
 
-### Timeline Engine
-
 <details>
-<summary>Monthly Project Timeline</summary>
+<summary><strong>Timeline Engine</strong></summary>
 
 **Purpose**
 
-Generates the complete monthly project calendar used by every downstream calculation.
+Creates the monthly project timeline used by every downstream calculation.
 
 Typical functions:
 
 ```excel
-=SEQUENCE(1,Total_Months+1,0,1)
+=SEQUENCE(1,Project_Months+1,0)
 ```
 
 ```excel
-=EDATE(Project_Start_Date,Month_Index)
+=EDATE(Project_Start,Month_Index)
 ```
 
 Supports:
 
+- Acquisition timing
 - Construction schedule
 - Sales schedule
 - Rental periods
-- Debt amortization
-- VAT timing
-- Exit calculations
+- Exit timing
+- Debt maturity
 
 </details>
 
 ---
 
-### Acquisition & Development Engine
-
 <details>
-<summary>Acquisition, Construction & Capital Expenditure</summary>
+<summary><strong>Acquisition & Development Engine</strong></summary>
 
 **Purpose**
 
-Calculates acquisition costs, construction expenditure, retention amounts, and project investment timing.
+Calculates acquisition costs, capital expenditure, construction progress, and investment timing.
 
-Typical calculations include:
+Typical logic:
 
 ```text
 Total Acquisition Cost
 
 Purchase Price
-+ Acquisition Tax
-+ Legal Costs
++ Taxes
++ Legal Fees
 + Transaction Costs
 ```
 
 ```text
-Monthly Capex
+Monthly Construction Spend
 
-Total Budget
+Budget
 ×
 Distribution Curve
-```
-
-```text
-Retention
-
-Monthly Capex
-×
-Retention Rate
 ```
 
 Supports:
@@ -543,27 +487,25 @@ Supports:
 - Refurbishment
 - Ground-up development
 - Multi-phase construction
-- Contractor retention releases
+- Contractor retention
 
 </details>
 
 ---
 
-### Revenue Engine
-
 <details>
-<summary>Sales & Rental Income</summary>
+<summary><strong>Revenue Engine</strong></summary>
 
 **Purpose**
 
 Projects operational income according to the selected investment strategy.
 
-Supported revenue models include:
+Supports:
 
 - Property sales
-- Unit-by-unit disposal
 - Rental income
-- Mixed-use projects
+- Mixed-use assets
+- Staged disposals
 
 Typical calculations:
 
@@ -580,30 +522,28 @@ Rental Revenue
 
 Occupied Units
 ×
-Average Rent
+Monthly Rent
 ```
 
-Optional adjustments include:
+Optional adjustments:
 
-- Occupancy curves
-- Inflation
+- Occupancy rates
 - Sales absorption
-- Exit value growth
+- Annual rent escalation
+- Exit value appreciation
 
 </details>
 
 ---
 
-### VAT Engine
-
 <details>
-<summary>VAT Recovery & Tax Timing</summary>
+<summary><strong>VAT Engine</strong></summary>
 
 **Purpose**
 
-Separates accounting VAT from cash VAT by incorporating refund delays into monthly cash flow projections.
+Separates accounting VAT from actual cash movements by incorporating configurable refund timing.
 
-Typical calculations:
+Typical logic:
 
 ```text
 VAT Paid
@@ -617,39 +557,37 @@ VAT Rate
 VAT Recovery
 
 VAT Paid
-shifted by Refund Lag
+shifted by Refund Delay
 ```
 
 Supports:
 
 - Quarterly recovery
 - Annual recovery
-- Custom refund delays
+- Custom recovery periods
 - Regional VAT assumptions
 
 </details>
 
 ---
 
-### Debt Engine
-
 <details>
-<summary>Senior Debt & Mortgage Calculations</summary>
+<summary><strong>Debt Engine</strong></summary>
 
 **Purpose**
 
-Calculates financing costs using multiple amortization methods.
+Calculates debt balances, interest expense, principal repayment, and financing costs.
 
 Supported structures:
 
+- Bullet loans
 - French amortization
 - Italian amortization
-- Bullet repayment
 
 Typical calculations:
 
 ```text
-Interest
+Interest Expense
 
 Outstanding Balance
 ×
@@ -668,21 +606,19 @@ Outputs include:
 
 - Outstanding balance
 - Principal repayment
-- Interest expense
-- Debt service schedule
+- Interest schedule
+- Debt service
 
 </details>
 
 ---
 
-### Revolving Credit Engine
-
 <details>
-<summary>Liquidity Financing</summary>
+<summary><strong>Revolving Credit Engine</strong></summary>
 
 **Purpose**
 
-Provides temporary funding whenever operating cash becomes negative.
+Automatically identifies temporary liquidity shortages and determines revolving credit requirements.
 
 Logic:
 
@@ -691,9 +627,9 @@ Running Cash Balance
 
 Opening Cash
 +
-Inflows
+Cash Inflows
 −
-Outflows
+Cash Outflows
 ```
 
 If:
@@ -705,35 +641,33 @@ Cash Balance < 0
 Then:
 
 ```text
-Borrow Required
-=
-Minimum(
+Required Borrowing
+
+MIN(
 Funding Gap,
-Available Credit Limit
+Credit Facility Limit
 )
 ```
 
-The revolving balance automatically reduces when positive operating cash becomes available.
+The revolving balance automatically decreases once positive operating cash becomes available.
 
 </details>
 
 ---
 
-### Investment Performance Engine
-
 <details>
-<summary>Investment Metrics</summary>
+<summary><strong>Investment Performance Engine</strong></summary>
 
 Primary performance indicators include:
 
 - Project IRR
 - Equity IRR
 - Equity Multiple
-- Peak Equity Required
-- Debt Service Coverage
-- Monthly Net Cash Flow
+- Net Present Value (NPV)
+- Peak Equity Requirement
 - Levered Cash Flow
 - Unlevered Cash Flow
+- Monthly Net Cash Position
 
 Typical Excel functions:
 
@@ -757,39 +691,35 @@ Typical Excel functions:
 =MIN(...)
 ```
 
-These outputs drive every KPI displayed on the executive dashboard.
-
-</details>
+These metrics feed the executive dashboard and scenario comparison reports.
 
 </details>
 
 ---
 
-<details>
-<summary><strong>Validation Rules</strong></summary>
+### Validation Rules
 
-The workbook includes validation logic to prevent invalid assumptions from propagating through the financial model.
+The workbook validates critical assumptions before they propagate through the financial model, reducing the risk of hidden calculation errors or inconsistent investment scenarios.
 
 | Field | Validation Rule | Error Behavior |
 |------|-----------------|----------------|
-| Project Strategy | Must match supported investment types | Invalid strategy selection blocked |
-| Active Scenario | Base / Optimistic / Downside only | Scenario not loaded |
-| Acquisition Cost | Greater than zero | Warning displayed |
+| Investment Strategy | Must match supported strategy list | Invalid selection blocked |
+| Scenario | Base / Optimistic / Downside only | Scenario not loaded |
+| Purchase Price | Greater than zero | Warning displayed |
 | Construction Budget | Cannot be negative | Input rejected |
-| Construction Distribution | Total allocation must equal 100% | Schedule flagged |
-| Loan-to-Value | 0–90% | Input warning |
-| Interest Rate | Non-negative percentage | Financing calculations suspended |
-| Debt Term | Positive integer | Debt schedule disabled |
-| VAT Rate | Regional range validation | Tax calculation warning |
-| VAT Refund Lag | 0–12 months | Default timing applied |
-| Exit Month | Must occur after acquisition | Exit analysis blocked |
-| Rental Occupancy | 0–100% | Revenue estimate rejected |
-| Retention Rate | 0–15% | Construction payment warning |
+| Construction Allocation | Monthly allocation must total 100% | Schedule flagged |
+| Loan-to-Value | 0–90% | Validation warning |
+| Interest Rate | Non-negative percentage | Financing engine paused |
+| Debt Term | Positive whole number | Debt schedule disabled |
+| VAT Rate | Configurable regional range | VAT warning displayed |
+| VAT Recovery Delay | 0–12 months | Default timing applied |
+| Exit Month | Must occur after acquisition | Exit calculation blocked |
+| Occupancy Rate | Between 0% and 100% | Revenue estimate rejected |
+| Retention Rate | Between 0% and 15% | Construction warning |
 | Revolving Credit Limit | Greater than or equal to zero | Liquidity engine disabled |
-| Scenario Tables | Complete parameter set required | Dashboard warning indicator |
-| Required Inputs | Mandatory fields cannot remain blank | Dashboard status changes to "Incomplete Inputs" |
+| Required Inputs | Mandatory fields cannot be blank | Dashboard status changes to **Incomplete Inputs** |
 
-The model is designed to fail safely whenever incomplete or inconsistent assumptions are entered, reducing the likelihood of hidden calculation errors propagating into investment recommendations.
+The model is intentionally designed to fail safely. Invalid assumptions are highlighted before downstream calculations are updated, allowing reviewers to identify issues at the input stage instead of discovering inconsistencies in investment outputs.
 
 </details>
 
@@ -797,15 +727,15 @@ The model is designed to fail safely whenever incomplete or inconsistent assumpt
 
 ## Other Tools in This Series
 
-If you work with Excel-based operational decision tools, you may also find these projects useful:
+Explore additional Excel-based decision-support toolkits designed for operational and financial analysis:
 
-- **Manufacturing Labor Cost & Capacity Planning Toolkit** — Analyze workforce utilization, production capacity, and labor cost scenarios.
-- **Demand-Adaptive Inventory Planning Toolkit** — Forecast inventory requirements and optimize replenishment decisions.
-- **Restaurant Menu Configuration & Modifier Pricing Toolkit** — Model menu engineering, pricing consistency, and modifier profitability.
-- **Construction Estimate & Cost Tracking Toolkit** — Build standardized project estimates and monitor construction budgets.
-- **Retail Inventory Ledger & Margin Analysis Toolkit** — Track inventory movement, purchasing costs, and gross margin performance.
+- **Manufacturing Labor Cost & Capacity Planning Toolkit** — Workforce planning, utilization analysis, and labor cost optimization.
+- **Demand-Adaptive Inventory Planning Toolkit** — Inventory forecasting and replenishment decision support.
+- **Restaurant Menu Configuration & Modifier Pricing Toolkit** — Menu engineering, pricing consistency, and profitability analysis.
+- **Construction Estimate & Cost Tracking Toolkit** — Standardized estimating and project cost control.
+- **Retail Inventory Ledger & Margin Analysis Toolkit** — Inventory valuation, purchasing analysis, and gross margin reporting.
 
-More decision-support tools are available through the project's GitHub profile and Gumroad store.
+More projects are available through this GitHub profile and the accompanying Gumroad store.
 
 ---
 
@@ -813,6 +743,4 @@ More decision-support tools are available through the project's GitHub profile a
 
 This project is licensed under the **Apache License 2.0**.
 
-You are free to use, modify, and distribute this work in accordance with the terms of the Apache License 2.0. The license is intended to encourage reuse while preserving proper attribution and maintaining transparency for future improvements.
-
-See the `LICENSE` file included in this repository for the complete license text.
+You are free to use, modify, and distribute this project under the terms of the Apache License 2.0. See the `LICENSE` file included in this repository for the complete license text.
