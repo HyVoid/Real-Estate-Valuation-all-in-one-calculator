@@ -34,35 +34,7 @@ jobs:
         run: npm run build
 
       - name: Relativize Next.js Asset Paths for GitHub Pages
-        run: |
-          node -e '
-            const fs = require("fs");
-            const path = require("path");
-            function walk(dir) {
-              const files = fs.readdirSync(dir);
-              for (const file of files) {
-                const fullPath = path.join(dir, file);
-                if (fs.statSync(fullPath).isDirectory()) {
-                  walk(fullPath);
-                } else if (file.endsWith(".html") || file.endsWith(".js") || file.endsWith(".css")) {
-                  let content = fs.readFileSync(fullPath, "utf8");
-                  // Replace absolute "/_next" paths to relative "./_next" paths
-                  content = content.replace(/(href|src|from)="\/_next/g, "$1=\"./_next");
-                  content = content.replace(/(href|src)="\/favicon\.ico/g, "$1=\"./favicon.ico");
-                  // Replace raw JS quotes
-                  content = content.replace(/"\/_next/g, "\"./_next");
-                  content = content.replace(/\'\/_next/g, "\'./_next");
-                  fs.writeFileSync(fullPath, content, "utf8");
-                }
-              }
-            }
-            if (fs.existsSync("out")) {
-              walk("out");
-              console.log("Successfully converted Next.js absolute asset paths to relative paths for zero-config GitHub Pages!");
-            } else {
-              console.log("out/ directory not found.");
-            }
-          '
+        run: node scripts/relativize.js
 
       - name: Deploy to GitHub Pages Branch
         uses: JamesIves/github-pages-deploy-action@v4
