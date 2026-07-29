@@ -16,7 +16,9 @@
 > Browser version [*here*](https://hyvoid.github.io/Real-Estate-Valuation-all-in-one-calculator/)
 >
 > 📥 **Download Excel**
+> 
 > [Google Doc View](https://docs.google.com/spreadsheets/d/1z_L_QknDAnAvKqv4oxfjWjSWV6eVkn92o4zqAE93p8w/edit?usp=sharing)
+> 
 > [Excel template purchase]()
 
 ---
