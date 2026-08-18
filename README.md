@@ -23,14 +23,6 @@
 
 ---
 
-# Screenshots
-
-<img width="1536" height="1024" alt="ChatGPT Image Jul 16, 2026, 09_23_57 AM" src="https://github.com/user-attachments/assets/71bbed8b-de51-4ba9-81eb-acbf9d7c2a9a" />
-
-*The full analytical workbook featuring scenario management, acquisition assumptions, debt modeling, monthly cash flow projections, VAT calculations, and executive dashboards.*
-
----
-
 # What It Helps You Analyze
 
 * Compare acquisition, refurbishment, development, rental, and joint venture strategies using one consistent financial framework.
