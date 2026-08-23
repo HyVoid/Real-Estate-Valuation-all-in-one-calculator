@@ -10,7 +10,9 @@
 
 **Evaluate acquisitions, development projects, rental investments, financing structures, and exit scenarios from one reusable financial model—directly in a browser or Excel, with no installation or manual model rebuilding required.**
 
-> ## **No signup. No installation. Free.**
+**No signup. No installation. Free in your browser.**
+
+Try the browser version for free. If you need the Excel version, you can buy it with a 7-day money-back guarantee.
 >
 > 🌐 **Open in Browser**
 > Browser version [*here*](https://hyvoid.github.io/Real-Estate-Valuation-all-in-one-calculator/)
