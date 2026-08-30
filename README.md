@@ -19,8 +19,6 @@ Try the browser version for free. If you need the Excel version, you can buy it 
 >
 > 📥 **Download Excel**
 > 
-> [Google Doc View](https://docs.google.com/spreadsheets/d/1z_L_QknDAnAvKqv4oxfjWjSWV6eVkn92o4zqAE93p8w/edit?usp=sharing)
-> 
 > [Excel template purchase]()
 
 ---
