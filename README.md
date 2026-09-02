@@ -730,7 +730,7 @@ Explore additional Excel-based decision-support toolkits designed for operationa
 - **Construction Estimate & Cost Tracking Toolkit** — Standardized estimating and project cost control.
 - **Retail Inventory Ledger & Margin Analysis Toolkit** — Inventory valuation, purchasing analysis, and gross margin reporting.
 
-More projects are available through this GitHub profile and the accompanying Gumroad store.
+More projects are available through this GitHub profile and our [Website](https://www.theseusworkshop.com/).
 
 ---
 
