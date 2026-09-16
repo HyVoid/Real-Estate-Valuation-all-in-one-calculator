@@ -19,7 +19,7 @@ Try the browser version for free. If you need the Excel version, you can buy it 
 >
 > 📥 **Download Excel**
 > 
-> [Excel template purchase](https://theseuworkshop.com/l/enrvgk)
+> [Excel template purchase](https://theseusworkshop.com/l/enrvgk)
 
 ---
 
