@@ -1,8 +1,11 @@
-[ 🌐 عربي ](README.ar.md) | [ 🇫🇷 Français ](README.fr.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
+[ 🌐 عربي ](README.ar.md) | [ 🇩🇪 Deutsch ](README.de.md) | [ 🇫🇷 Français ](README.fr.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
 
 # Excel-sjabloon voor Vastgoedfinanciële Modellering: Multi-strategie Investeringsanalysemotor
+<img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/60f60815-31e7-423c-9043-adc4cc49f9b3" />
 
-### Professioneel Vastgoed Pro-forma Resultatenrekening & Kasstroom Kredietbeoordeling-hulpmiddel (Excel + Web App)
+
+
+## Professioneel Vastgoed Pro-forma Resultatenrekening & Kasstroom Kredietbeoordeling-hulpmiddel (Excel + Web App)
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Browser%20%7C%20Excel-2ea44f)
@@ -115,7 +118,7 @@ Dit financieel model is geoptimaliseerd voor vastgoedprofessionals die instituti
 
 ---
 
-# Over
+## Over
 
 Ik bouw lichte analytische hulpmiddelen voor situaties waarin te veel operationele, financiële en strategische variabelen met elkaar interacteren om betrouwbaar alleen in het geheugen te worden beheerd.
 
