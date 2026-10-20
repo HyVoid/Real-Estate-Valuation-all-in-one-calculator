@@ -1,8 +1,11 @@
-[ 🌐 عربي ](README.ar.md) | [ 🇫🇷 Français ](README.fr.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
+[ 🌐 عربي ](README.ar.md) | [ 🇩🇪 Deutsch ](README.de.md) | [ 🇫🇷 Français ](README.fr.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
 
 # Plantilla de Modelado Financiero Inmobiliario en Excel: Motor de Análisis de Inversión Multi-Estrategia
+<img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/60f60815-31e7-423c-9043-adc4cc49f9b3" />
 
-### Herramienta Profesional de Estado de Resultados Proforma Inmobiliario y Evaluación Crediticia de Flujo de Caja (Excel + Aplicación Web)
+
+
+## Herramienta Profesional de Estado de Resultados Proforma Inmobiliario y Evaluación Crediticia de Flujo de Caja (Excel + Aplicación Web)
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Browser%20%7C%20Excel-2ea44f)
@@ -115,7 +118,7 @@ Este modelo financiero está optimizado para profesionales inmobiliarios que req
 
 ---
 
-# Acerca de
+## Acerca de
 
 Construyo herramientas analíticas ligeras para situaciones en las que demasiadas variables operativas, financieras y estratégicas interactúan para ser gestionadas de forma fiable solo en la memoria.
 
