@@ -1,10 +1,10 @@
-[ 🌐 عربي ](README.ar.md) | [ 🇫🇷 Français ](README.fr.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
+[ 🌐 عربي ](README.ar.md) | [ 🇩🇪 Deutsch ](README.de.md) | [ 🇫🇷 Français ](README.fr.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
 
 # Real Estate Financial Modeling Excel Template: Multi-Strategy Investment Analysis Engine
 <img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/60f60815-31e7-423c-9043-adc4cc49f9b3" />
 
 
-### Professional Real Estate Pro Forma & Cash Flow Underwriting Tool (Excel + Web App)
+## Professional Real Estate Pro Forma & Cash Flow Underwriting Tool (Excel + Web App)
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Browser%20%7C%20Excel-2ea44f)
@@ -117,7 +117,7 @@ This financial model is optimized for real estate professionals who require inst
 
 ---
 
-# About
+## About
 
 I build lightweight analytical tools for situations where too many operational, financial, and strategic variables interact to be managed reliably in memory alone.
 
