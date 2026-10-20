@@ -1,8 +1,11 @@
-[ 🌐 عربي ](README.ar.md) | [ 🇫🇷 Français ](README.fr.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
+[ 🌐 عربي ](README.ar.md) | [ 🇩🇪 Deutsch ](README.de.md) | [ 🇫🇷 Français ](README.fr.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
 
 # Modèle Excel de Modélisation Financière Immobilière : Moteur d'Analyse d'Investissement Multi-Stratégie
+<img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/60f60815-31e7-423c-9043-adc4cc49f9b3" />
 
-### Outil professionnel de Pro Forma immobilier et d'analyse du risque de flux de trésorerie (Excel + Application Web)
+
+
+## Outil professionnel de Pro Forma immobilier et d'analyse du risque de flux de trésorerie (Excel + Application Web)
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Browser%20%7C%20Excel-2ea44f)
@@ -115,7 +118,7 @@ Ce modèle financier est optimisé pour les professionnels de l'immobilier qui e
 
 ---
 
-# À propos
+## À propos
 
 Je développe des outils d'analyse légers pour les situations où trop de variables opérationnelles, financières et stratégiques interagissent pour être gérées de manière fiable uniquement en mémoire.
 
