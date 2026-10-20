@@ -1,8 +1,11 @@
-[ 🌐 عربي ](README.ar.md) | [ 🇫🇷 Français ](README.fr.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
+[ 🌐 عربي ](README.ar.md) | [ 🇩🇪 Deutsch ](README.de.md) | [ 🇫🇷 Français ](README.fr.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
 
 # قالب النمذجة المالية العقارية في إكسل: محرك تحليل الاستثمار متعدد الاستراتيجيات
+<img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/60f60815-31e7-423c-9043-adc4cc49f9b3" />
 
-### أداة احترافية للبيان المالي التقديري العقاري والتقييم الائتماني للتدفق النقدي (إكسل + تطبيق ويب)
+
+
+## أداة احترافية للبيان المالي التقديري العقاري والتقييم الائتماني للتدفق النقدي (إكسل + تطبيق ويب)
 
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Browser%20%7C%20Excel-2ea44f)
@@ -115,7 +118,7 @@
 
 ---
 
-# نبذة عن
+## نبذة عن
 
 أبني أدوات تحليلية خفيفة للمواقف التي تتفاعل فيها متغيرات تشغيلية ومالية واستراتيجية كثيرة جدًا بحيث لا يمكن إدارتها بثقة بالاعتماد على الذاكرة وحدها.
 
