@@ -23,7 +23,7 @@ Testez vos hypothèses d'investissement immobilier avec notre outil d'analyse gr
 > [Essayez le modèle financier immobilier gratuit dans votre navigateur](https://hyvoid.github.io/Real-Estate-Valuation-all-in-one-calculator/)
 >
 > 📥 **Téléchargement Premium**
-> [Téléchargez le modèle Pro Forma immobilier Excel complet](https://theseusworkshop.com/l/enrvgk)
+> [Téléchargez le modèle Pro Forma immobilier Excel complet](https://theseusworkshop.com/l/enrvgk?utm_source=github&utm_medium=GitHub%20README)
 
 ---
 
@@ -53,7 +53,7 @@ Suivez ce flux de modélisation financière étape par étape pour analyser avec
    Consultez instantanément le **tableau de bord d'analyse**. Évaluez la cascade de flux de trésorerie mensuelle générée, le service total de la dette, les besoins en capital au pic, les TRI avec et sans levier ainsi que les multiples sur fonds propres, afin de déterminer si l'opération satisfait vos critères d'investissement stricts.
 
 4. **Téléchargez le modèle Excel réutilisable pour vos futures opérations**
-   Une fois la version navigateur testée pour l'évaluation d'une seule opération, transposez cette puissance hors ligne. [Téléchargez le modèle Excel de modélisation financière immobilière réutilisable](https://theseusworkshop.com/l/enrvgk) pour mettre à jour en continu les coûts réels, ajuster les conditions de financement relais et analyser un nombre illimité de futurs biens commerciaux ou résidentiels à l'aide du même cadre robuste.
+   Une fois la version navigateur testée pour l'évaluation d'une seule opération, transposez cette puissance hors ligne. [Téléchargez le modèle Excel de modélisation financière immobilière réutilisable](https://theseusworkshop.com/l/enrvgk?utm_source=github&utm_medium=GitHub%20README) pour mettre à jour en continu les coûts réels, ajuster les conditions de financement relais et analyser un nombre illimité de futurs biens commerciaux ou résidentiels à l'aide du même cadre robuste.
 
 ---
 
