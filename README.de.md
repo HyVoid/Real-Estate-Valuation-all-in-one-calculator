@@ -22,7 +22,7 @@ Testen Sie Ihre Annahmen zur Immobilieninvestition mit unserem kostenlosen webba
 > [Testen Sie das kostenlose Immobilien-Finanzmodell in Ihrem Browser](https://hyvoid.github.io/Real-Estate-Valuation-all-in-one-calculator/)
 >
 > 📥 **Premium-Download**
-> [Laden Sie die vollständige Immobilien-Pro-Forma-Excel-Vorlage herunter](https://theseusworkshop.com/l/enrvgk)
+> [Laden Sie die vollständige Immobilien-Pro-Forma-Excel-Vorlage herunter](https://theseusworkshop.com/l/enrvgk?utm_source=github&utm_medium=GitHub%20README)
 
 ---
 
@@ -52,7 +52,7 @@ Befolgen Sie diesen schrittweisen Finanzmodellierungs-Workflow, um Ihre nächste
    Überprüfen Sie sofort das **Underwriting-Dashboard**. Bewerten Sie den generierten monatlichen Cashflow-Wasserfall, den gesamten Schuldendienst, den Spitzenkapitalbedarf, den Levered/Unlevered IRR und die Equity Multiples, um zu bestimmen, ob der Deal Ihre strengen Investitionskriterien erfüllt.
 
 4. **Die wiederverwendbare Excel-Vorlage für künftige Deals herunterladen**
-   Nachdem Sie die Browser-Version für eine einzelne Deal-Bewertung getestet haben, holen Sie sich die Power offline. [Laden Sie die wiederverwendbare Excel-Vorlage für Immobilienfinanzmodellierung herunter](https://theseusworkshop.com/l/enrvgk), um laufend tatsächliche Kosten zu aktualisieren, Brückenfinanzierungskonditionen anzupassen und unbegrenzt viele künftige gewerbliche oder wohnwirtschaftliche Immobilien mit demselben robusten Rahmen zu analysieren.
+   Nachdem Sie die Browser-Version für eine einzelne Deal-Bewertung getestet haben, holen Sie sich die Power offline. [Laden Sie die wiederverwendbare Excel-Vorlage für Immobilienfinanzmodellierung herunter](https://theseusworkshop.com/l/enrvgk?utm_source=github&utm_medium=GitHub%20README), um laufend tatsächliche Kosten zu aktualisieren, Brückenfinanzierungskonditionen anzupassen und unbegrenzt viele künftige gewerbliche oder wohnwirtschaftliche Immobilien mit demselben robusten Rahmen zu analysieren.
 
 ---
 
