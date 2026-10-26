@@ -22,7 +22,7 @@ Test your property investment assumptions using our free web-based underwriting 
 > [Try the Free Real Estate Financial Model in Your Browser](https://hyvoid.github.io/Real-Estate-Valuation-all-in-one-calculator/)
 >
 > 📥 **Premium Download**
-> [Download the Full Real Estate Pro Forma Excel Template](https://theseusworkshop.com/l/enrvgk)
+> [Download the Full Real Estate Pro Forma Excel Template](https://theseusworkshop.com/l/enrvgk?utm_source=github&utm_medium=GitHub%20README)
 
 ---
 
@@ -52,7 +52,7 @@ Follow this step-by-step financial modeling workflow to accurately underwrite yo
    Instantly review the **Underwriting Dashboard**. Evaluate the generated monthly cash flow waterfall, total debt service, peak capital requirements, Levered/Unlevered IRR, and equity multiples to determine if the deal meets your strict investment criteria.
 
 4. **Download the Reusable Excel Template for Future Deals**
-   Once you have tested the browser version for a single deal evaluation, bring the power offline. [Download the reusable Real Estate Financial Modeling Excel Template](https://theseusworkshop.com/l/enrvgk) to continually update actual costs, adjust bridge financing terms, and underwrite unlimited future commercial or residential properties using the exact same robust framework.
+   Once you have tested the browser version for a single deal evaluation, bring the power offline. [Download the reusable Real Estate Financial Modeling Excel Template](https://theseusworkshop.com/l/enrvgk?utm_source=github&utm_medium=GitHub%20README) to continually update actual costs, adjust bridge financing terms, and underwrite unlimited future commercial or residential properties using the exact same robust framework.
 
 ---
 
