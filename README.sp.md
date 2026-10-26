@@ -23,7 +23,7 @@ Pruebe sus supuestos de inversión inmobiliaria con nuestra herramienta de evalu
 > [Pruebe el Modelo Financiero Inmobiliario Gratuito en su Navegador](https://hyvoid.github.io/Real-Estate-Valuation-all-in-one-calculator/)
 >
 > 📥 **Descarga Premium**
-> [Descargue la Plantilla Completa de Pro Forma Inmobiliario en Excel](https://theseusworkshop.com/l/enrvgk)
+> [Descargue la Plantilla Completa de Pro Forma Inmobiliario en Excel](https://theseusworkshop.com/l/enrvgk?utm_source=github&utm_medium=GitHub%20README)
 
 ---
 
@@ -53,7 +53,7 @@ Siga este flujo de trabajo de modelado financiero paso a paso para evaluar con p
    Revise al instante el **Panel de Evaluación Crediticia**. Evalúe la cascada de flujo de caja mensual generada, el servicio total de la deuda, los requisitos de capital pico, la TIR Apalancada/No Apalancada y los múltiplos de capital propio para determinar si el negocio cumple sus estrictos criterios de inversión.
 
 4. **Descargar la Plantilla Excel Reutilizable para Futuros Negocios**
-   Una vez que haya probado la versión del navegador para la evaluación de un solo negocio, lleve el poder sin conexión. [Descargue la Plantilla de Modelado Financiero Inmobiliario Excel Reutilizable](https://theseusworkshop.com/l/enrvgk) para actualizar continuamente los costes reales, ajustar los términos de financiación puente y evaluar ilimitadas propiedades comerciales o residenciales futuras utilizando exactamente el mismo marco robusto.
+   Una vez que haya probado la versión del navegador para la evaluación de un solo negocio, lleve el poder sin conexión. [Descargue la Plantilla de Modelado Financiero Inmobiliario Excel Reutilizable](https://theseusworkshop.com/l/enrvgk?utm_source=github&utm_medium=GitHub%20README) para actualizar continuamente los costes reales, ajustar los términos de financiación puente y evaluar ilimitadas propiedades comerciales o residenciales futuras utilizando exactamente el mismo marco robusto.
 
 ---
 
