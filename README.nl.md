@@ -23,7 +23,7 @@ Test uw aannames voor vastgoedinvesteringen met ons gratis op web gebaseerde und
 > [Probeer het Gratis Vastgoedfinanciële Model in Uw Browser](https://hyvoid.github.io/Real-Estate-Valuation-all-in-one-calculator/)
 >
 > 📥 **Premium Download**
-> [Download de Volledige Vastgoed Pro-forma Excel-sjabloon](https://theseusworkshop.com/l/enrvgk)
+> [Download de Volledige Vastgoed Pro-forma Excel-sjabloon](https://theseusworkshop.com/l/enrvgk?utm_source=github&utm_medium=GitHub%20README)
 
 ---
 
@@ -53,7 +53,7 @@ Volg deze stapsgewijze werkstroom voor financiële modellering om uw volgende va
    Bekijk onmiddellijk het **Underwriting-dashboard**. Evalueer de gegenereerde maandelijkse kasstroomwaterfall, totale schuldendienst, piekkapitaalbehoefte, hefboom-/ongehevelde IRR en eigenvermogen-multiples om te bepalen of de deal voldoet aan uw strikte investeringscriteria.
 
 4. **Download de Herbruikbare Excel-sjabloon voor Toekomstige Deals**
-   Zodra u de browserversie heeft getest voor de evaluatie van één deal, neem dan de kracht offline. [Download het herbruikbare Excel-sjabloon voor vastgoedfinanciële modellering](https://theseusworkshop.com/l/enrvgk) om werkelijke kosten continu bij te werken, voorwaarden voor brugfinanciering aan te passen en onbeperkte toekomstige commerciële of residentiële vastgoedobjecten te beoordelen met het exacte, robuuste raamwerk.
+   Zodra u de browserversie heeft getest voor de evaluatie van één deal, neem dan de kracht offline. [Download het herbruikbare Excel-sjabloon voor vastgoedfinanciële modellering](https://theseusworkshop.com/l/enrvgk?utm_source=github&utm_medium=GitHub%20README) om werkelijke kosten continu bij te werken, voorwaarden voor brugfinanciering aan te passen en onbeperkte toekomstige commerciële of residentiële vastgoedobjecten te beoordelen met het exacte, robuuste raamwerk.
 
 ---
 
