@@ -1058,16 +1058,22 @@ export default function RealEstateModelApp() {
           
           {/* Brand Identity / Left logo */}
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-[8px] bg-[#051C2C] flex items-center justify-center text-white">
-              <Building2 className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 rounded-[8px] bg-[#051C2C] flex items-center justify-center text-white shrink-0 shadow-sm ring-1 ring-[#051C2C]/10">
+              <Building2 className="w-4 h-4 text-white" />
             </div>
-            <div>
-              <h1 className="text-sm font-semibold uppercase tracking-[0.06em] text-[#051C2C]">
-                Real Estate Financial Model
+            <div className="flex flex-col justify-center">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold tracking-[0.06em] uppercase text-[#2251FF]">
+                  Theseus Workshop
+                </span>
+                <span className="text-[#888888] text-[10px]">•</span>
+                <span className="text-[10px] font-mono text-[#888888] uppercase tracking-wider">
+                  Decision Engine
+                </span>
+              </div>
+              <h1 className="text-xs font-semibold tracking-tight text-[#051C2C] leading-none mt-0.5">
+                Capital Allocation & Real Estate Operations
               </h1>
-              <p className="text-[10px] text-[#888888] font-mono leading-none mt-0.5">
-                PARAMETRIC DECISION ENGINE
-              </p>
             </div>
           </div>
 
@@ -2184,7 +2190,7 @@ export default function RealEstateModelApp() {
       {/* Footer Branding line */}
       <footer className="py-6 border-t border-[#E8E8E6] bg-white">
         <div className="max-w-[1400px] mx-auto px-10 flex items-center justify-between text-xs text-[#888888]">
-          <p>© 2026 Real Estate Operations Financial Model. Built under SaaS Architecture standards.</p>
+          <p>© 2026 Theseus Workshop • Capital Allocation & Real Estate Operations. Built under SaaS Architecture standards.</p>
           <div className="flex items-center gap-4">
             <span className="font-mono">v1.2.0</span>
             <span className="w-2 h-2 rounded-full bg-[#00C853]" title="Operational Database Online" />

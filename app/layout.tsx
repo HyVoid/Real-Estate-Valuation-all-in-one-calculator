@@ -13,8 +13,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Real Estate Operations Financial Model',
-  description: 'High-Precision Parametric Decision Engine & Financial Analyzer for Real Estate Operational Scenarios',
+  title: 'Theseus Workshop | Capital Allocation & Real Estate Operations',
+  description: 'Parametric multi-scenario decision engine & 120-month operations simulator for capital allocation and real estate operations by Theseus Workshop.',
+  openGraph: {
+    title: 'Theseus Workshop | Capital Allocation & Real Estate Operations',
+    description: 'Parametric multi-scenario decision engine & 120-month operations simulator for capital allocation and real estate operations by Theseus Workshop.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Theseus Workshop | Capital Allocation & Real Estate Operations',
+    description: 'Parametric multi-scenario decision engine & 120-month operations simulator for capital allocation and real estate operations by Theseus Workshop.',
+  },
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
