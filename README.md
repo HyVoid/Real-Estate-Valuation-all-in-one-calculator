@@ -29,6 +29,14 @@ Test a single property deal right now in your browser using the free interactive
 > 📥 **Get the Reusable Plug-and-Play Excel Spreadsheet (`.xlsx` File Download)**
 > [**Download the Unlocked Real Estate Investment Calculator Excel Template for Unlimited Copy-Paste Deal Analysis**](https://theseusworkshop.com/l/enrvgk?utm_source=github&utm_medium=GitHub%20README) *(Best for ongoing deal flow, saving local files, and instant 1-click financial modeling)*
 
+## Spreadsheet Preview
+
+Want to take a closer look before downloading? You can preview the spreadsheet in Google Sheets to explore its layout, structure, and calculation logic.
+
+**[View Spreadsheet Preview on Google Sheets](https://docs.google.com/spreadsheets/d/1pG1hhhGgFl-5VvMzFlIT3IyEZmj6I0tm/edit?usp=sharing&ouid=108770714531989318327&rtpof=true&sd=true)**
+
+> **Note on Compatibility:** The Google Sheets preview may display occasional `#NAME?` errors or formula warnings due to differences between Google Sheets and Microsoft Excel formula compatibility. These are preview-only compatibility issues and do not affect the functionality of the original Excel workbook. For the intended formula behavior and full functionality, please download and open the `.xlsx` file in Microsoft Excel.
+
 ---
 
 ## What It Helps You Track: Real Estate Deal Analysis Pain Points & Automated Excel Solutions
