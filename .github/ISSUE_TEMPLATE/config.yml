@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "Questions & Usage Help"
+    url: "https://github.com/HyVoid/business-decision-toolbox/discussions/categories/questions"
+    about: "Ask how to use the workbook, interpret an output, or apply the workflow."
+  - name: "Ideas & Workflow Suggestions"
+    url: "https://github.com/HyVoid/business-decision-toolbox/discussions/categories/ideas"
+    about: "Discuss improvements, feature ideas, or broader use cases."
+  - name: "Product Updates"
+    url: "https://github.com/HyVoid/business-decision-toolbox/discussions/categories/product-updates"
+    about: "Follow product announcements and release notes."
