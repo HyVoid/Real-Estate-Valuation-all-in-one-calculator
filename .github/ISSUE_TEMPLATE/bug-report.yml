@@ -1,103 +1,50 @@
-name: "Product Bug Report"
-description: "Report a reproducible issue in Real Estate Investment & Valuation Calculator."
-title: "[Bug]: "
-labels: ["bug", "triage"]
+name: "🐞 Report a Formula or Web Calculator Bug"
+description: "Report a reproducible calculation error, validation alert, or display bug in the web app or Excel workbook."
+title: "[Bug] "
+labels: ["bug"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thank you for helping improve this tool. Please report one issue per submission.
-        **Do not include personal data, credentials, confidential business records, or unredacted source documents.**
-        Use fabricated or fully de-identified examples only.
-
   - type: dropdown
-    id: problem_area
-    attributes:
-      label: "Which workflow area is affected?"
-      options:
-        - "Property assumptions / inputs"
-        - "Rental cash flow / operating expenses"
-        - "Fix-and-flip renovation / holding costs"
-        - "Financing / debt schedule"
-        - "Valuation / comparable assumptions"
-        - "ROI / IRR / cash-on-cash outputs"
-        - "Scenario analysis / dashboard"
-        - "Other"
-    validations:
-      required: true
-
-  - type: dropdown
-    id: environment
+    id: platform
     attributes:
       label: "Where did the issue occur?"
       options:
-        - "Microsoft Excel for Windows"
-        - "Microsoft Excel for Mac"
-        - "Excel for the web"
-        - "Free browser-based demo"
-        - "Google Sheets / imported workbook"
-        - "Other / not sure"
+        - "All-in-One Excel Workbook (.xlsx) — Microsoft 365 / Excel 2021+"
+        - "All-in-One Excel Workbook (.xlsx) — Older Excel Version"
+        - "Free Online Web Calculator (GitHub Pages)"
+        - "Google Sheets Preview"
     validations:
       required: true
 
   - type: input
-    id: version
+    id: affected_tab
     attributes:
-      label: "Workbook or demo version"
-      description: "If unknown, write Not sure. Include the Excel version if relevant."
-      placeholder: "e.g. downloaded 2026-11-22; Excel 365"
+      label: "Affected worksheet or strategy"
+      placeholder: "e.g., 03_Calculation_Engine / Fix-and-Flip Downside Scenario"
     validations:
       required: true
 
   - type: textarea
-    id: summary
+    id: description
     attributes:
-      label: "What happened?"
-      description: "Describe the problem and the task you were trying to complete."
-      placeholder: "I used fabricated sample data and noticed..."
+      label: "Expected vs. actual result"
+      description: "Explain what you expected the calculator to show versus what actually happened."
     validations:
       required: true
 
   - type: textarea
-    id: expected_actual
+    id: steps
     attributes:
-      label: "Expected result vs. actual result"
-      description: "Include the exact error text or affected sheet / output field. Do not include confidential values."
+      label: "Steps to reproduce (synthetic example numbers only)"
       placeholder: |
-        Expected:
-        Actual:
+        1. Select Strategy = Fix-and-Flip, Scenario = Base
+        2. Enter Purchase Price = 300,000, Rehab = 60,000...
     validations:
       required: true
-
-  - type: textarea
-    id: reproduction_steps
-    attributes:
-      label: "Steps to reproduce"
-      description: "List the minimum steps using synthetic or de-identified data."
-      placeholder: |
-        1. Open the relevant sheet or demo.
-        2. Enter fabricated sample values.
-        3. Run the calculation or select the relevant option.
-        4. Observe the unexpected result.
-    validations:
-      required: true
-
-  - type: textarea
-    id: safe_example
-    attributes:
-      label: "Safe sample data (optional)"
-      description: "Share column names and fabricated sample rows only. Never paste raw exports or identifiable records."
-      placeholder: |
-        Column names:
-        Fabricated example rows:
-        Approximate row count:
-    validations:
-      required: false
 
   - type: checkboxes
     id: privacy_check
     attributes:
-      label: "Privacy confirmation"
+      label: "Privacy & Data Safety Confirmation (Required)"
       options:
-        - label: "I confirm this report contains no personal data, credentials, confidential records, or unredacted business documents."
+        - label: "I have removed all real property addresses, personal details, tax records, and confidential deal assumptions."
           required: true
