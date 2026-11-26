@@ -1,0 +1,44 @@
+name: "💡 Request a Property Strategy, Tax Rule, or New Excel Toolkit"
+description: "Want an extra financing mode, regional tax/VAT rule, or a brand-new real estate/business Excel template?"
+title: "[Request] "
+labels: ["enhancement", "product-idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us what real estate or business calculation is slowing down your decisions. Your request directly shapes future updates and new toolkits at **Theseus Workshop**.
+
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: "What are you requesting?"
+      options:
+        - "Add a strategy or metric to this All-in-One Real Estate Calculator"
+        - "Add a regional tax / VAT / mortgage rule (e.g., UK, US, EU, AU)"
+        - "Build a brand-new plug-and-play Excel toolkit for another decision"
+    validations:
+      required: true
+
+  - type: input
+    id: investor_profile
+    attributes:
+      label: "Your primary strategy or role"
+      placeholder: "e.g., Rental property buyer, house flipper, BRRRR investor, Airbnb host, broker..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: decision_pain
+    attributes:
+      label: "What specific decision or cash-flow problem are you trying to model?"
+      placeholder: "e.g., Modeling a BRRRR cash-out refinance at Month 9 with seasonal Airbnb occupancy..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: privacy_check
+    attributes:
+      label: "Privacy Check (Required)"
+      options:
+        - label: "I confirm this post contains NO real property addresses, client names, loan agreements, or confidential financial data."
+          required: true
